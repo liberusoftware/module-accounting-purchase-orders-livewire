@@ -24,7 +24,7 @@ it('covers accounting-purchase-orders-livewire components', function (): void {
         'status' => PurchaseOrderStatus::Draft,
     ]);
 
-    $component = new PurchaseOrders;
+    $component = new PurchaseOrders();
     $component->selectOrder((int) $order->getKey());
     $component->status = 'pending_approval';
     $component->transitionStatus(app(TransitionPurchaseOrder::class));
